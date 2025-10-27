@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, My Love ♡</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #fde2e4, #e2ece9);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .swiper {
+      width: 90%;
+      max-width: 600px;
+      height: 90vh;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      visibility: hidden; /* hidden first, not display none */
+    }
+
+    .swiper-slide {
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2em;
+      box-sizing: border-box;
+    }
+
+    h1, h2 {
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #555;
+      line-height: 1.6em;
+    }
+
+    .handwritten {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.4em;
+      color: #444;
+    }
+
+    img.polaroid {
+      width: 70%;
+      max-width: 280px;
+      border: 10px solid white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transform: rotate(-2deg);
+      margin-bottom: 15px;
+      border-radius: 6px;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+      color: #f4a7b9;
+    }
+
+    .mickey {
+      width: 120px;
+      margin-bottom: 15px;
+    }
+
+    /* Play Button Overlay */
+    .music-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #fde2e4, #e2ece9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 10;
+    }
+
+    .music-overlay button {
+      background: #f4a7b9;
+      color: white;
+      border: none;
+      padding: 12px 26px;
+      border-radius: 50px;
+      font-size: 1.1em;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .music-overlay button:hover {
+      background: #f0839b;
+      transform: scale(1.05);
+    }
+
+    .music-overlay p {
+      color: #555;
+      margin-top: 15px;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Music Play Overlay -->
+  <div class="music-overlay" id="music-overlay">
+    <button id="play-btn">Play Music ♫</button>
+    <p>tap to begin</p>
+  </div>
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1: Opening -->
+      <div class="swiper-slide" style="background: linear-gradient(135deg, #fef6f9, #f9f9f9);">
+        <img src="https://upload.wikimedia.org/wikipedia/en/d/d4/Mickey_Mouse.png" alt="Mickey" class="mickey">
+        <h2>Hi love ♡</h2>
+        <p class="handwritten">Happy Birthday! I made this little book for you, so you can flip through my heart anytime you miss me.</p>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide" style="background: #fffafc;">
+        <img src="https://i.ibb.co/qsYsz6T/polaroid1.jpg" alt="photo" class="polaroid">
+        <p class="handwritten">You deserve all the love, laughter, and warmth in this world. I hope today makes you feel how special you truly are.</p>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide" style="background: #fefefe;">
+        <img src="https://i.ibb.co/g7WY9y2/polaroid2.jpg" alt="photo" class="polaroid">
+        <p class="handwritten">I still remember how it all started. Just small talks, random jokes, and somehow you became my favorite part of every day.</p>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide" style="background: #fff5f8;">
+        <img src="https://i.ibb.co/JmYZQjz/polaroid3.jpg" alt="photo" class="polaroid">
+        <p class="handwritten">Remember when my dad said "this ugly world need more beauty like yours" on his old love letter? I think now I finally understand what he meant.</p>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="swiper-slide" style="background: #fef9ff;">
+        <img src="https://i.ibb.co/zn5Vtnf/polaroid4.jpg" alt="photo" class="polaroid">
+        <p class="handwritten">No distance could ever make me love you less. It only reminds me how worth it everything is.</p>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="swiper-slide" style="background: #fdf6f9;">
+        <p class="handwritten">Falling for you was the most unexpected thing in my life, and it turned out to be the best thing that has ever happened to me. Being away from you is the greatest reminder of how much your presence means to me. I love you and I will always love you.</p>
+      </div>
+
+      <!-- Slide 7: Closing -->
+      <div class="swiper-slide" style="background: linear-gradient(135deg, #fef6f9, #e2ece9);">
+        <h2 class="handwritten">Happy Birthday, my favorite person 💗</h2>
+        <p class="handwritten">Can’t wait for the day we celebrate this together.</p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="anything4u.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    // Initialize swiper (hidden first)
+    const swiper = new Swiper('.mySwiper', {
+      effect: 'cards',
+      grabCursor: true,
+      loop: false,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    // Play music when user clicks button
+    const playBtn = document.getElementById('play-btn');
+    const overlay = document.getElementById('music-overlay');
+    const swiperContainer = document.querySelector('.swiper');
+    const music = document.getElementById('bg-music');
+
+    playBtn.addEventListener('click', () => {
+      music.play().catch(err => console.log(err));
+      overlay.style.display = 'none';
+      swiperContainer.style.visibility = 'visible';
+      swiper.update(); // refresh swiper size so slides work
+    });
+  </script>
+
+</body>
+</html>
